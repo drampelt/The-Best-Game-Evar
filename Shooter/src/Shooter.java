@@ -1,12 +1,13 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JFrame;
 //import required items
 
-public class Shooter extends JFrame{
+public class Shooter extends JFrame implements KeyListener{
 	//start our class, extends JFrame which is the windows system
 	/**
 	 * 
@@ -26,7 +27,7 @@ public class Shooter extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//make the X close the window
 		setResizable(false);
-		//make the window un resizable
+		//make the window unresizable
 		setSize(600,400);
 		//set windows
 		setBackground(Color.BLACK);
@@ -44,7 +45,7 @@ public class Shooter extends JFrame{
 		graphics = image.getGraphics();
 
 		g.fillRect(0, 0, getWidth(), getHeight());
-		//set it all one colour, black is default
+		//set it all one color, black is default
 
 		paintComponent(graphics);
 		g.drawImage(image, 0, 0, null);
@@ -75,6 +76,24 @@ public class Shooter extends JFrame{
 	public static void main(String[] args) {
 		//main function, starts the shooter method above
 		new Shooter();
+	}
+
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
