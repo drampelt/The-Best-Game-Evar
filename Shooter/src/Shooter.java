@@ -34,8 +34,8 @@ public class Shooter extends JFrame{
 		setVisible(true);
 		//make it appear
 		
-		player1 = new Player(10, 150, 20, 90, 10, getImage("images/player1.gif"));
-		player2 = new Player(570, 150, 20, 90, 10, getImage("images/player2.gif"));
+		player1 = new Player(10, 150, 20, 90, 10, getImage("images/spaceship1.gif"));
+		player2 = new Player(570, 150, 20, 90, 10, getImage("images/spaceship2.gif"));
 		
 	}
 	
