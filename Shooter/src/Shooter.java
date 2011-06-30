@@ -29,6 +29,8 @@ public class Shooter extends JFrame{
 		//make the window un resizable
 		setSize(600,400);
 		//set windows
+		setBackground(Color.BLACK);
+		//set background
 		setVisible(true);
 		//make it appear
 		
