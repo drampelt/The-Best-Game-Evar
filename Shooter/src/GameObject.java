@@ -1,3 +1,4 @@
+import java.awt.Graphics;
 import java.awt.Image;
 
 
@@ -8,6 +9,9 @@ public abstract class GameObject {
 	protected int height;
 	protected int width;
 	protected int health;
+	
+	abstract void draw(Graphics g);
+	abstract void update();
 	
 	public int getHeight() {
 		return height;
