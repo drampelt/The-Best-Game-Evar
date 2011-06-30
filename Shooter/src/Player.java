@@ -4,7 +4,16 @@ import java.awt.Image;
 
 public class Player extends GameObject {
 //extends gameobject class we have
-	public Player(final int xPos, final int yPos, final int height, final int width, final int health, final Image img){
+	/** 
+	 * create a player
+	 * @param xPos x position
+	 * @param yPos y position
+	 * @param height height of player
+	 * @param width width of player
+	 * @param health health of player
+	 * @param img image of player
+	 */
+	public Player(final int xPos, final int yPos, final int width, final int height, final int health, final Image img){
 		this.xPos = xPos;
 		this.yPos = yPos;
 		this.height = height;
