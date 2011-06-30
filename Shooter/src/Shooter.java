@@ -34,8 +34,8 @@ public class Shooter extends JFrame{
 		setVisible(true);
 		//make it appear
 		
-		player1 = new Player(10, 150, 20, 90, 10, getImage("images/spaceship1.gif"));
-		player2 = new Player(570, 150, 20, 90, 10, getImage("images/spaceship2.gif"));
+		player1 = new Player(10, 150, 20, 90, 10, "images/spaceship1.gif");
+		player2 = new Player(570, 150, 20, 90, 10, "images/spaceship2.gif");
 		
 	}
 	
@@ -54,10 +54,6 @@ public class Shooter extends JFrame{
 	public void paintComponent(Graphics g){
 		player1.draw(g);
 		player2.draw(g);
-	}
-	
-	private Image getImage(String img){
-		return Toolkit.getDefaultToolkit().getImage(img);
 	}
 	
 	public Player getPlayer1() {

@@ -1,5 +1,6 @@
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Toolkit;
 
 
 public class Player extends GameObject {
@@ -13,13 +14,13 @@ public class Player extends GameObject {
 	 * @param health health of player
 	 * @param img image of player
 	 */
-	public Player(final int xPos, final int yPos, final int width, final int height, final int health, final Image img){
+	public Player(final int xPos, final int yPos, final int width, final int height, final int health, final String img){
 		this.xPos = xPos;
 		this.yPos = yPos;
 		this.height = height;
 		this.width = width;
 		this.health = health;
-		this.img = img;
+		this.img = getImage(img);
 		//set variables like position on screen
 	}
 
@@ -32,6 +33,11 @@ public class Player extends GameObject {
 	void update() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	Image getImage(String img) {
+		return Toolkit.getDefaultToolkit().getImage(img);
 	}
 	
 }

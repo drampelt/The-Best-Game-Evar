@@ -12,6 +12,7 @@ public abstract class GameObject {
 	//create variables
 	abstract void draw(Graphics g);
 	abstract void update();
+	abstract Image getImage(String img);
 	//all stuff below is used to set or get each variable info
 	public int getHeight() {
 		return height;
