@@ -1,8 +1,10 @@
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 
 
 public abstract class GameObject {
+	protected Rectangle rect;
 	protected Image img;
 	protected int xPos;
 	protected int yPos;

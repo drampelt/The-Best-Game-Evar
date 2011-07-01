@@ -1,5 +1,6 @@
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.Rectangle;
 import java.awt.Toolkit;
 
 
@@ -19,6 +20,7 @@ public class Player extends GameObject {
 		this.yPos = yPos;
 		this.height = height;
 		this.width = width;
+		this.rect = new Rectangle(xPos, yPos, width, height);
 		this.health = health;
 		this.img = getImage(img);
 		//set variables like position on screen

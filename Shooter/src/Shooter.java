@@ -3,6 +3,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.swing.JFrame;
 //import required items
@@ -23,6 +24,7 @@ public class Shooter extends JFrame implements KeyListener{
 	boolean player1Down = false;
 	boolean player2Up = false;
 	boolean player2Down = false;
+	CopyOnWriteArrayList<Bullet> bullets = new CopyOnWriteArrayList<Bullet>();
 	
 	public Shooter() {
 		//shooter method that main starts
@@ -59,6 +61,10 @@ public class Shooter extends JFrame implements KeyListener{
 	}
 	
 	public void paintComponent(Graphics g){
+		for(Bullet bullet : bullets){
+			bullet.draw(g);
+			bullet.update(this, 0);
+		}
 		player1.draw(g);
 		player1.update(this, 1);
 		player2.draw(g);
@@ -112,6 +118,12 @@ public class Shooter extends JFrame implements KeyListener{
 			player1Up = false;
 		} else if(e.getKeyCode() == KeyEvent.VK_S){
 			player1Down = false;
+		} else if(e.getKeyCode() == KeyEvent.VK_SPACE){
+			Bullet player1Bullet = new Bullet(player2, player1.getxPos() + 20, player1.getyPos() + 45, 4, 4, "images/laser.gif");
+			bullets.add(player1Bullet);
+		} else if(e.getKeyCode() == KeyEvent.VK_ENTER){
+			Bullet player2Bullet = new Bullet(player1, player2.getxPos() - 4, player2.getyPos() + 45, 4, 4, "images/laser.gif");
+			bullets.add(player2Bullet);
 		}
 		
 	}
