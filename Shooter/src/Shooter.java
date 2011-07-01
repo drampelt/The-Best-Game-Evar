@@ -75,6 +75,8 @@ public class Shooter extends JFrame implements KeyListener{
 			g.setColor(Color.red);
 			g.drawString("Player one wins!", 250, 190);
 		}
+		g.setColor(Color.blue);
+		g.drawString("Made by: zmm22 and drampelt", 210, 370);
 		player1.draw(g);
 		player1.update(this, 1);
 		player2.draw(g);
