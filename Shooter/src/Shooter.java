@@ -43,8 +43,8 @@ public class Shooter extends JFrame implements KeyListener{
 		setVisible(true);
 		//make it appear
 		
-		player1 = new Player(10, 150, 20, 90, 10, "./images/spaceship1.gif");
-		player2 = new Player(570, 150, 20, 90, 10, "./images/spaceship2.gif");
+		player1 = new Player(10, 150, 20, 90, 10, "/images/spaceship1.gif");
+		player2 = new Player(570, 150, 20, 90, 10, "/images/spaceship2.gif");
 		
 	}
 	
@@ -131,10 +131,10 @@ public class Shooter extends JFrame implements KeyListener{
 		} else if(e.getKeyCode() == KeyEvent.VK_S){
 			player1Down = false;
 		} else if(e.getKeyCode() == KeyEvent.VK_SPACE){
-			Bullet player1Bullet = new Bullet(player2, 1, player1.getxPos() + 20, player1.getyPos() + 45, 4, 4, "./images/laser.gif");
+			Bullet player1Bullet = new Bullet(player2, 1, player1.getxPos() + 20, player1.getyPos() + 45, 4, 4, "/images/laser.gif");
 			bullets.add(player1Bullet);
 		} else if(e.getKeyCode() == KeyEvent.VK_ENTER){
-			Bullet player2Bullet = new Bullet(player1, -1, player2.getxPos() - 4, player2.getyPos() + 45, 4, 4, "./images/laser.gif");
+			Bullet player2Bullet = new Bullet(player1, -1, player2.getxPos() - 4, player2.getyPos() + 45, 4, 4, "/images/laser.gif");
 			bullets.add(player2Bullet);
 		}
 		

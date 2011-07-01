@@ -64,7 +64,7 @@ public class Player extends GameObject {
 
 	@Override
 	Image getImage(String img) {
-		return Toolkit.getDefaultToolkit().getImage(img);
+		return  Toolkit.getDefaultToolkit().getImage(Player.class.getResource(img));
 	}
 	
 }
