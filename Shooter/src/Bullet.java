@@ -29,10 +29,12 @@ public class Bullet extends GameObject {
 	void update(final Shooter shooter, final int id) {
 		if(rect.intersects(player.rect)){
 			shooter.bullets.remove(this);
+			player.setHealth(player.getHealth() - 1);
 		} else if(xPos < 5 || xPos > 595){
 			shooter.bullets.remove(this);
 		} else {
 			xPos += deltaX;
+			rect.x += deltaX;
 		}
 		
 	}

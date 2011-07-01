@@ -37,10 +37,12 @@ public class Player extends GameObject {
 			if(shooter.player1Up){
 				if(!(yPos < 26)){
 					yPos--;
+					rect.y--;
 				}
 			} else if (shooter.player1Down){
 				if(!(yPos > shooter.getHeight() - 86)){
 					yPos++;
+					rect.x++;
 				}
 			}
 			
@@ -48,10 +50,12 @@ public class Player extends GameObject {
 			if(shooter.player2Up){
 				if(!(yPos < 26)){
 					yPos--;
+					rect.y--;
 				}
 			} else if (shooter.player2Down){
 				if(!(yPos > shooter.getHeight() - 86)){
 					yPos++;
+					rect.y++;
 				}
 			}
 		}

@@ -61,9 +61,19 @@ public class Shooter extends JFrame implements KeyListener{
 	}
 	
 	public void paintComponent(Graphics g){
-		for(Bullet bullet : bullets){
-			bullet.draw(g);
-			bullet.update(this, 0);
+		if(player1.getHealth() > 0 && player2.getHealth() > 0) {
+			g.setColor(Color.red);
+			g.drawString(player1.getHealth() + " HP | " + player2.getHealth() + " HP", 255, 50);
+			for(Bullet bullet : bullets){
+				bullet.draw(g);
+				bullet.update(this, 0);
+			}
+		} else if(player1.getHealth() == 0){
+			g.setColor(Color.red);
+			g.drawString("Player two wins!", 250, 190);
+		} else if(player2.getHealth() == 0){
+			g.setColor(Color.red);
+			g.drawString("Player one wins!", 250, 190);
 		}
 		player1.draw(g);
 		player1.update(this, 1);
