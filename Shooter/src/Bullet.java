@@ -21,7 +21,7 @@ public class Bullet extends GameObject {
 	}
 
 	@Override
-	void update() {
+	void update(final int id) {
 		// TODO Auto-generated method stub
 		
 	}

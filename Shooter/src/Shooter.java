@@ -19,6 +19,10 @@ public class Shooter extends JFrame implements KeyListener{
 	private Player player2;
 	private Image image;
 	private Graphics graphics;
+	private boolean player1Up = false;
+	private boolean player1Down = false;
+	private boolean player2Up = false;
+	private boolean player2Down = false;
 	
 	public Shooter() {
 		//shooter method that main starts
@@ -28,6 +32,8 @@ public class Shooter extends JFrame implements KeyListener{
 		//make the X close the window
 		setResizable(false);
 		//make the window unresizable
+		addKeyListener(this);
+		//add key listener
 		setSize(600,400);
 		//set windows
 		setBackground(Color.BLACK);
@@ -79,19 +85,37 @@ public class Shooter extends JFrame implements KeyListener{
 	}
 
 	@Override
-	public void keyPressed(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode() == KeyEvent.VK_UP){
+			player2Up = true;
+		} else if(e.getKeyCode() == KeyEvent.VK_DOWN){
+			player2Down = true;
+		} else
+		if(e.getKeyCode() == KeyEvent.VK_W){
+			player1Up = true;
+		} else if(e.getKeyCode() == KeyEvent.VK_S){
+			player1Down = true;
+		}
 		
 	}
 
 	@Override
-	public void keyReleased(KeyEvent arg0) {
-		// TODO Auto-generated method stub
+	public void keyReleased(KeyEvent e) {
+		if(e.getKeyCode() == KeyEvent.VK_UP){
+			player2Up = false;
+		} else if(e.getKeyCode() == KeyEvent.VK_DOWN){
+			player2Down = false;
+		} else
+		if(e.getKeyCode() == KeyEvent.VK_W){
+			player1Up = false;
+		} else if(e.getKeyCode() == KeyEvent.VK_S){
+			player1Down = false;
+		}
 		
 	}
 
 	@Override
-	public void keyTyped(KeyEvent arg0) {
+	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}

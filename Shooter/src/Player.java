@@ -30,8 +30,12 @@ public class Player extends GameObject {
 	}
 
 	@Override
-	void update() {
-		// TODO Auto-generated method stub
+	void update(final int id) {
+		if(id == 1){
+			
+		}else if(id == 2){
+			
+		}
 		
 	}
 
