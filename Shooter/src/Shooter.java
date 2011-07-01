@@ -19,10 +19,10 @@ public class Shooter extends JFrame implements KeyListener{
 	private Player player2;
 	private Image image;
 	private Graphics graphics;
-	private boolean player1Up = false;
-	private boolean player1Down = false;
-	private boolean player2Up = false;
-	private boolean player2Down = false;
+	boolean player1Up = false;
+	boolean player1Down = false;
+	boolean player2Up = false;
+	boolean player2Down = false;
 	
 	public Shooter() {
 		//shooter method that main starts
@@ -60,7 +60,9 @@ public class Shooter extends JFrame implements KeyListener{
 	
 	public void paintComponent(Graphics g){
 		player1.draw(g);
+		player1.update(this, 1);
 		player2.draw(g);
+		player2.update(this, 2);
 	}
 	
 	public Player getPlayer1() {

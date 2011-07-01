@@ -30,11 +30,28 @@ public class Player extends GameObject {
 	}
 
 	@Override
-	void update(final int id) {
+	void update(final Shooter shooter, final int id) {
 		if(id == 1){
+			if(shooter.player1Up){
+				if(!(yPos < 26)){
+					yPos--;
+				}
+			} else if (shooter.player1Down){
+				if(!(yPos > shooter.getHeight() - 86)){
+					yPos++;
+				}
+			}
 			
 		}else if(id == 2){
-			
+			if(shooter.player2Up){
+				if(!(yPos < 26)){
+					yPos--;
+				}
+			} else if (shooter.player2Down){
+				if(!(yPos > shooter.getHeight() - 86)){
+					yPos++;
+				}
+			}
 		}
 		
 	}
