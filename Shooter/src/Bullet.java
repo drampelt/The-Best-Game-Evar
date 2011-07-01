@@ -10,8 +10,9 @@ public class Bullet extends GameObject {
 	private int deltaX;
 	private Player player;
 	
-	public Bullet(final Player player, final int xPos, final int yPos, final int width, final int height, final String img){
+	public Bullet(final Player player, final int deltaX,final int xPos, final int yPos, final int width, final int height, final String img){
 		this.player = player;
+		this.deltaX = deltaX;
 		this.xPos = xPos;
 		this.yPos = yPos;
 		this.height = height;
@@ -30,6 +31,8 @@ public class Bullet extends GameObject {
 			shooter.bullets.remove(this);
 		} else if(xPos < 5 || xPos > 595){
 			shooter.bullets.remove(this);
+		} else {
+			xPos += deltaX;
 		}
 		
 	}
