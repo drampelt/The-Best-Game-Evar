@@ -42,7 +42,7 @@ public class Player extends GameObject {
 			} else if (shooter.player1Down){
 				if(!(yPos > shooter.getHeight() - 86)){
 					yPos++;
-					rect.x++;
+					rect.y++;
 				}
 			}
 			
